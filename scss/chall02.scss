@@ -551,7 +551,8 @@ header{
                 transition: all .1s ease-in-out;
                 overflow: hidden;
                 height: 0;
-                line-height: 2.1;
+                line-height: 2;
+                color: rgb(117, 115, 115);
             }
         }
     }
@@ -592,12 +593,16 @@ footer{
             }
             #form{
                 position: relative !important;
+                display: flex;
+                flex-direction: column;
+                padding: 1.3rem 2rem;
+                // align-items: center;
                 .contact{
                     display: flex;
                     flex-direction: column;
                     gap: 0rem;
-                    padding: 1.3rem 2rem;
                     position: relative ;
+                    
                     
                     #text{
                         background-color: hsl(0, 94%, 66%);
@@ -618,21 +623,27 @@ footer{
                             outline: none;
                         }
                     }
+                    .error{
+                        position: absolute;
+                        right: .5rem;
+                        display: none;
+                        top: .9rem !important;
+                    }
                     
-                    .red-btn{
-                        margin-top: 1rem;
-                        background-color: hsl(0, 94%, 66%);
-                        border: 0;
-                        padding: .9rem 0;
-                        border-radius: 5px;
-                        color: #fff;
-                        letter-spacing: .1rem;
-                        font-family: poppins;
-                        &:hover{
-                            color: hsl(0, 94%, 66%);
-                            background-color: #fff;
-                            border: 2px  solid hsl(0, 94%, 66%);
-                        }
+                }
+                .red-btn{
+                    margin-top: .5rem;
+                    background-color: hsl(0, 94%, 66%);
+                    border: 0;
+                    padding: .9rem 0;
+                    border-radius: 5px;
+                    color: #fff;
+                    letter-spacing: .1rem;
+                    font-family: poppins;
+                    &:hover{
+                        color: hsl(0, 94%, 66%);
+                        background-color: #fff;
+                        border: 2px  solid hsl(0, 94%, 66%);
                     }
                 }
             }
@@ -1027,16 +1038,20 @@ footer{
     footer{
         .join{
             margin: 0 !important;
-            
-            .contact{
+            #form{
                 display: flex;
-                flex-direction: row !important;
-                align-items: center;
                 justify-content: center;
-                
-                
-                // label{
-                
+                flex-direction: row !important;
+                gap: 1rem;
+                .contact{
+                    display: flex;
+                    flex-direction: column !important;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    span{
+                        width: 100%;
+                    }
                     input{
                         padding: .7rem 0 .7rem .5rem !important;
                         width: 30rem !important;
@@ -1044,15 +1059,21 @@ footer{
                             outline: none;
                         }
                     }
-                // }
-                .red-btn{
-                    padding: .6rem .8rem !important;
-                    margin: 0 !important;
-                    &:hover{
-                        color: hsl(0, 94%, 66%);
-                        background-color: #fff;
-                        border: 2px  solid hsl(0, 94%, 66%);
+                    .error{
+                        position: absolute;
+                        right: .5rem;
+                        display: none;
+                        top: 0rem !important;
                     }
+                }
+                .red-btn{
+                    // padding: .6rem .8rem !important;
+                    padding: 0 .8rem !important;
+                    // margin: 0 !important;
+                    height: 2.3rem;
+                    // margin-bottom: 1.3rem  !important;
+                    margin: 0 !important;
+                    // padding: 0 !important;
                 }
             }
         }

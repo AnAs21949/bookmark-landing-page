@@ -188,16 +188,16 @@ closeBtn.addEventListener("click", function(){
     function validation(){
     var input = document.querySelector(".input");
     // var text = document.getElementById("text");
-    var form = document.getElementById("form");
+    const error = document.querySelector(".error")
     var pattern =  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(input.value.match(pattern)){
         // form.classList.add("valid");
         text.classList.remove("show")
-        form.classList.remove("invalid");
+        error.classList.remove("show");
         input.style.boxShadow = 'none';
 
     }else {
-        form.classList.add("invalid");
+        error.classList.add("show");
         text.classList.add("show")
         input.style.boxShadow = 'hsl(0, 94%, 66%) 0px 1px 4px, hsl(0, 94%, 66%) 0px 0px 0px 3px';
     }

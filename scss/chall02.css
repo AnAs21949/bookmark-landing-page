@@ -549,7 +549,8 @@ header .close {
   transition: all 0.1s ease-in-out;
   overflow: hidden;
   height: 0;
-  line-height: 2.1;
+  line-height: 2;
+  color: rgb(117, 115, 115);
 }
 
 .show {
@@ -584,12 +585,14 @@ footer .f-container .join .up-to-date {
 }
 footer .f-container .join #form {
   position: relative !important;
+  display: flex;
+  flex-direction: column;
+  padding: 1.3rem 2rem;
 }
 footer .f-container .join #form .contact {
   display: flex;
   flex-direction: column;
   gap: 0rem;
-  padding: 1.3rem 2rem;
   position: relative;
 }
 footer .f-container .join #form .contact #text {
@@ -611,8 +614,14 @@ footer .f-container .join #form .contact input {
 footer .f-container .join #form .contact input:focus {
   outline: none;
 }
-footer .f-container .join #form .contact .red-btn {
-  margin-top: 1rem;
+footer .f-container .join #form .contact .error {
+  position: absolute;
+  right: 0.5rem;
+  display: none;
+  top: 0.9rem !important;
+}
+footer .f-container .join #form .red-btn {
+  margin-top: 0.5rem;
   background-color: hsl(0deg, 94%, 66%);
   border: 0;
   padding: 0.9rem 0;
@@ -621,7 +630,7 @@ footer .f-container .join #form .contact .red-btn {
   letter-spacing: 0.1rem;
   font-family: poppins;
 }
-footer .f-container .join #form .contact .red-btn:hover {
+footer .f-container .join #form .red-btn:hover {
   color: hsl(0deg, 94%, 66%);
   background-color: #fff;
   border: 2px solid hsl(0deg, 94%, 66%);
@@ -956,27 +965,38 @@ footer .f-container .f-hero .f-logo svg circle {
   footer .join {
     margin: 0 !important;
   }
-  footer .join .contact {
+  footer .join #form {
     display: flex;
+    justify-content: center;
     flex-direction: row !important;
+    gap: 1rem;
+  }
+  footer .join #form .contact {
+    display: flex;
+    flex-direction: column !important;
     align-items: center;
     justify-content: center;
   }
-  footer .join .contact input {
+  footer .join #form .contact span {
+    width: 100%;
+  }
+  footer .join #form .contact input {
     padding: 0.7rem 0 0.7rem 0.5rem !important;
     width: 30rem !important;
   }
-  footer .join .contact input:focus {
+  footer .join #form .contact input:focus {
     outline: none;
   }
-  footer .join .contact .red-btn {
-    padding: 0.6rem 0.8rem !important;
-    margin: 0 !important;
+  footer .join #form .contact .error {
+    position: absolute;
+    right: 0.5rem;
+    display: none;
+    top: 0rem !important;
   }
-  footer .join .contact .red-btn:hover {
-    color: hsl(0deg, 94%, 66%);
-    background-color: #fff;
-    border: 2px solid hsl(0deg, 94%, 66%);
+  footer .join #form .red-btn {
+    padding: 0 0.8rem !important;
+    height: 2.3rem;
+    margin: 0 !important;
   }
   footer .f-hero {
     padding: 0 7rem !important;
