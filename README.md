@@ -4,6 +4,6 @@
 
 Advice: Do this challenge.
 
-It took a long time... ,not perfect but you will learn a lot
+
 
               "Done Is Better Than Perfect"
