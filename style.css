@@ -977,7 +977,7 @@ footer .f-container .f-hero .f-logo svg circle {
   footer .join #form .red-btn {
     padding: 0 0.8rem !important;
     height: 2.3rem;
-    margin: 0 !important;
+    /* margin: 0 !important; */
   }
   footer .f-hero {
     padding: 0 7rem !important;
